@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 2,
+  "requires": [
+    "response-conditions"
+  ],
+  "permissions": {
+    "network": [
+      "api.superbed.cn"
+    ],
+    "readSelectedFile": true,
+    "allowInsecureHttp": false
+  },
+  "config": [
+    {
+      "key": "apiKey",
+      "label": "聚合图床 API Key",
+      "type": "secret",
+      "required": true,
+      "hint": "在聚合图床用户中心获取；请勿填写账户密码"
+    }
+  ],
+  "upload": {
+    "method": "POST",
+    "url": "https://api.superbed.cn/upload",
+    "headers": {
+      "X-API-Key": "${config.apiKey}",
+      "Accept": "application/json"
+    },
+    "body": {
+      "type": "multipart",
+      "fileField": "file"
+    },
+    "response": {
+      "url": "url",
+      "successStatuses": [
+        200
+      ],
+      "success": {
+        "path": "err",
+        "equals": 0
+      },
+      "errorMessage": "msg"
+    },
+    "followRedirects": false,
+    "timeoutSeconds": 120,
+    "errors": {
+      "400": "图片或上传请求不符合聚合图床要求。",
+      "401": "API Key 无效或已过期，请检查配置。",
+      "403": "上传被拒绝，请检查账户的 API 权限。",
+      "413": "图片超过图床允许的大小。",
+      "429": "请求过于频繁，请稍后重试。",
+      "500": "聚合图床服务异常，请稍后重试。",
+      "502": "聚合图床网关异常，请稍后重试。",
+      "503": "聚合图床暂不可用，请稍后重试。"
+    }
+  }
+}

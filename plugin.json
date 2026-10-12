@@ -1,0 +1,15 @@
+{
+  "packageVersion": 1,
+  "runtime": "http-v2",
+  "entry": "uploader.json",
+  "id": "io.github.ruzmarin.picora.superbed-api",
+  "name": "聚合图床Superbed(API)",
+  "version": "1.0.2",
+  "description": "使用聚合图床 API Key上传。",
+  "author": "迷迭香",
+  "homepage": "https://www.superbed.cn/",
+  "repository": "https://github.com/ruzmariN/picora-plugin-superbed",
+  "icon": "assets/icon.svg",
+  "mark": "SB",
+  "color": "#3678C9"
+}
