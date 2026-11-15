@@ -4,12 +4,12 @@
   "entry": "uploader.json",
   "id": "io.github.ruzmarin.picora.superbed-api",
   "name": "聚合图床Superbed(API)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "使用聚合图床 API Key上传。",
   "author": "迷迭香",
   "homepage": "https://www.superbed.cn/",
-  "repository": "https://github.com/ruzmariN/picora-plugin-superbed",
-  "icon": "assets/icon.svg",
-  "mark": "SB",
-  "color": "#3678C9"
+  "repository": "https://github.com/ruzmariN/picora-plugins-superbed-api",
+  "icon": "assets/icon.png",
+  "mark": "SBA",
+  "color": "#CC297A"
 }

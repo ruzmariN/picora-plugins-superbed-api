@@ -15,6 +15,7 @@
       "key": "apiKey",
       "label": "聚合图床 API Key",
       "type": "secret",
+      "role": "token",
       "required": true,
       "hint": "在聚合图床用户中心获取；请勿填写账户密码"
     }
