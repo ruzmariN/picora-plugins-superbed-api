@@ -9,7 +9,7 @@
 2. 在Picora中安装此插件。
 3. 新建「聚合图床 (Superbed)」配置，填写 API Key 后选择图片上传。
 
-需要 Picora 1.0.7 或更新版本（配置项使用了 `role` 字段声明「Token」标签）。
+需要 Picora 1.0.8 或更新版本（配置项使用了 `role` 字段声明「Token」标签）。
 
 ## 说明
 - 请求发往 `https://api.superbed.cn/upload`，以 `X-API-Key` 请求头传递密钥，以 multipart/form-data 的 `file` 字段发送图片。只有 HTTP 200 且响应 `err` 为数字 `0` 时才视为成功；错误说明从 `msg` 读取。上传请求不会跟随重定向或自动重传。
